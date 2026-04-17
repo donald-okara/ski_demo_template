@@ -23,7 +23,9 @@ import skidemotemplate.composeapp.generated.resources.compose_multiplatform
 @Composable
 @Preview
 fun App() {
+    val text = remember { getQueryParam("text") }
+
     MaterialTheme {
-        HelloSki()
+        HelloSki(text)
     }
 }

@@ -25,7 +25,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun HelloSki() {
+fun HelloSki(
+    text: String?
+) {
     var expanded by remember { mutableStateOf(false) }
 
     val scale by animateFloatAsState(
@@ -52,7 +54,7 @@ fun HelloSki() {
         contentAlignment = Alignment.Center
     ) {
         Text(
-            text = "Hello, World!",
+            text = text ?: "Hello, You!",
             color = color,
             fontSize = 32.sp,
             fontWeight = FontWeight.Bold,
